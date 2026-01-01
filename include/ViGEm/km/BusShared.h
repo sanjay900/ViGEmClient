@@ -29,9 +29,9 @@ SOFTWARE.
 // IMPORTANT: make sure to change this value if you fork it or introduce 
 //				breaking changes!
 // 
-// {96E42B22-F5E9-42F8-B043-ED0F932F014F}
+// {380C517C-86BB-4670-A3E9-1CA2311CAF89}
 DEFINE_GUID(GUID_DEVINTERFACE_BUSENUM_VIGEM,
-    0x96E42B22, 0xF5E9, 0x42F8, 0xB0, 0x43, 0xED, 0x0F, 0x93, 0x2F, 0x01, 0x4F);
+    0x380C517C, 0x86BB, 0x4670, 0xA3, 0xE9, 0x1C, 0xA2, 0x31, 0x1C, 0xAF, 0x89);
 
 #pragma once
 
@@ -109,6 +109,11 @@ typedef struct _VIGEM_PLUGIN_TARGET
     // If set, the product ID the emulated device is reporting
     // 
     USHORT ProductId;
+
+    //
+    // If set, the subtype the emulated device is reporting
+    //
+    XUSB_SUBTYPE SubType;
 
 } VIGEM_PLUGIN_TARGET, *PVIGEM_PLUGIN_TARGET;
 

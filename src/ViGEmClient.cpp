@@ -474,6 +474,7 @@ PVIGEM_TARGET vigem_target_x360_alloc(void)
 
 	target->VendorId = 0x045E;
 	target->ProductId = 0x028E;
+	target->SubType = XUSB_SUBTYPE_GAMEPAD;
 
 	return target;
 }
@@ -565,6 +566,7 @@ VIGEM_ERROR vigem_target_add(PVIGEM_CLIENT vigem, PVIGEM_TARGET target)
 
 			plugin.VendorId = target->VendorId;
 			plugin.ProductId = target->ProductId;
+			plugin.SubType = target->SubType;
 
 			/*
 			 * Request plugin of device. This is an inherently asynchronous operation,
@@ -963,6 +965,11 @@ void vigem_target_set_pid(PVIGEM_TARGET target, USHORT pid)
 	target->ProductId = pid;
 }
 
+void vigem_target_set_subtype(PVIGEM_TARGET target, XUSB_SUBTYPE subtype)
+{
+	target->SubType = subtype;
+}
+
 USHORT vigem_target_get_vid(PVIGEM_TARGET target)
 {
 	return target->VendorId;
@@ -971,6 +978,11 @@ USHORT vigem_target_get_vid(PVIGEM_TARGET target)
 USHORT vigem_target_get_pid(PVIGEM_TARGET target)
 {
 	return target->ProductId;
+}
+
+XUSB_SUBTYPE vigem_target_get_subtype(PVIGEM_TARGET target)
+{
+	return target->SubType;
 }
 
 VIGEM_ERROR vigem_target_x360_update(

@@ -63,6 +63,7 @@ typedef struct _VIGEM_TARGET_T
     VIGEM_TARGET_STATE State;
     USHORT VendorId;
     USHORT ProductId;
+    XUSB_SUBTYPE SubType;
     VIGEM_TARGET_TYPE Type;
     FARPROC Notification;
     LPVOID NotificationUserData;

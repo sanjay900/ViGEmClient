@@ -64,6 +64,24 @@ typedef enum _XUSB_BUTTON
 
 } XUSB_BUTTON, *PXUSB_BUTTON;
 
+typedef enum _XUSB_SUBTYPE
+{
+    XUSB_SUBTYPE_GAMEPAD                    = 0x01,
+    XUSB_SUBTYPE_WHEEL                      = 0x02,
+    XUSB_SUBTYPE_ARCADE_STICK               = 0x03,
+    XUSB_SUBTYPE_FLIGHT_STICK               = 0x04,
+    XUSB_SUBTYPE_DANCE_PAD                  = 0x05,
+    XUSB_SUBTYPE_GUITAR                     = 0x06,
+    XUSB_SUBTYPE_GUITAR_ALTERNATE           = 0x07,
+    XUSB_SUBTYPE_DRUM_KIT                   = 0x08,
+    XUSB_SUBTYPE_STAGE_KIT                  = 0x09,
+    XUSB_SUBTYPE_GUITAR_BASS                = 0x0B,
+    XUSB_SUBTYPE_PRO_KEYS                   = 0x0F,
+    XUSB_SUBTYPE_ARCADE_PAD                 = 0x13,
+    XUSB_SUBTYPE_PRO_GUITAR                 = 0x19,
+    XUSB_SUBTYPE_DISNEY_INFINITY_SKYLANDERS = 0x21,
+    XUSB_SUBTYPE_LEGO_DIMENSIONS            = 0x24,
+} XUSB_SUBTYPE, *PXUSB_SUBTYPE;
 //
 // Represents an XINPUT_GAMEPAD-compatible report structure.
 // 
